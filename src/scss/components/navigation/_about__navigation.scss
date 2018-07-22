@@ -1,0 +1,69 @@
+.navigation {
+  &__checkbox {
+    display: none;
+    z-index: -1;
+    visibility: hidden;
+  }
+  &__checkbox-about:checked~.container::before {
+    transform: translateX(35vw);
+    background: linear-gradient(to right bottom, rgba($primary-whitish, 0.9), rgba($primary-color-about, 1)), url('./.././img/hike.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70vw;
+  }
+  &__checkbox-about:checked~.container::after {
+    transform: translateX(-60vw);
+    width: 40vw;
+    background: linear-gradient(to right bottom, rgba($primary-color-about, 0.9), rgba($primary-color-about, 1)), url('.././img/desk.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+  &__checkbox-about:checked~.container>.name__div {
+    color: $white;
+  }
+  &__checkbox-about:checked~.container>.menu>.menu__list>.menu__list-item>.menu__item {
+    color: $mast-blue;
+  }
+  &__checkbox-about:checked~.container>.menu>.menu__list>.menu__list-item {
+    &:hover>.menu__item::after {
+      background: $primary-color-about;
+      transform: translateY(1rem);
+    }
+  }
+  &__checkbox-about:checked~.container>.mast {
+    width: 45%;
+    height: 25%;
+    top: 25%;
+    left: 5%;
+    border-radius: 5%;
+    -webkit-clip-path: polygon(1% 0, 81% 0, 100% 100%, 16% 100%);
+    clip-path: polygon(1% 0, 81% 0, 100% 100%, 16% 100%);
+  }
+  &__checkbox-about:checked~.container>.mast>.mast__header {
+    z-index: 6000;
+    backface-visibility: hidden;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    background: $primary-color-services;
+    width: 60%;
+  }
+  &__checkbox-about:checked~.container>.mast::after {
+    background: $primary-color-services;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  &__checkbox-about:checked~.container>.about {
+    transform: translateY(-1vh);
+    opacity: 1;
+    z-index: 7000;
+  }
+  &__checkbox-about:checked~.container>.skills {
+    transform: translateY(-1vh);
+    opacity: 1;
+    z-index: 8000;
+  }
+}

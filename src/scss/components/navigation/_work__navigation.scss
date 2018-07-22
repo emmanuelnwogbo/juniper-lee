@@ -1,0 +1,42 @@
+.navigation {
+  &__checkbox-work {}
+  &__checkbox-work:checked~.container::before {
+    transform: translateX(35vw);
+    background: linear-gradient(to right bottom, rgba($primary-whitish, 0.9), rgba($primary-color-work2, 1)), url('./.././img/hike.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70vw;
+  }
+  &__checkbox-work:checked~.container::after {
+    transform: translateX(-60vw);
+    width: 40vw;
+    background: linear-gradient(to right bottom, rgba($primary-color-work2, 0.7), rgba($primary-color-work2, 0.7)), url('.././img/desk.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+  &__checkbox-work:checked~.container>.work {
+    opacity: 1;
+    z-index: 7000;
+    transform: translateY(0%) translateX(0%);
+  }
+  &__checkbox-work:checked~.container>.name__div {
+    color: $white;
+  }
+  &__checkbox-work:checked~.container>.name__div>.name__div-label::after {
+    top: 15%;
+    left: 0;
+    width: 70%;
+    height: 70%;
+  }
+  &__checkbox-work:checked~.container>.menu>.menu__list>.menu__list-item>.menu__item {
+    color: $primary-color-work2;
+  }
+  &__checkbox-work:checked~.container>.menu>.menu__list>.menu__list-item {
+    &:hover>.menu__item::after {
+      background: $primary-color-work2;
+      transform: translateY(1rem);
+    }
+  }
+}

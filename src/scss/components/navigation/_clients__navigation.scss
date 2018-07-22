@@ -1,0 +1,16 @@
+.navigation {
+  &__checkbox-clients:checked~.container>.name__div {
+    color: $primary-color-client;
+  }
+  &__checkbox-clients:checked~.container>.clients {
+    z-index: 7000;
+    opacity: 1;
+    transform: translateY(-0vh);
+  }
+  &__checkbox-clients:checked~.container::after {
+    background: linear-gradient(to right bottom, rgba($primary-color-client, 0.9), rgba($primary-color-client, 1)), url('.././img/desk.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

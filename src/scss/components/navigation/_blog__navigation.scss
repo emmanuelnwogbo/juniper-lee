@@ -1,0 +1,18 @@
+.navigation {
+  &__checkbox-blog:checked~.container>.blog {
+    z-index: 7000;
+    opacity: 1;
+  }
+  &__checkbox-blog:checked~.container>.name__div {
+    color: $primary-color-blog-item;
+  }
+  &__checkbox-blog:checked~.container>.menu>.menu__list>.menu__list-item>.menu__item {
+    color: $primary-color-blog-item;
+  }
+  &__checkbox-blog:checked~.container>.menu>.menu__list>.menu__list-item {
+    &:hover>.menu__item::after {
+      background: $primary-color-blog-item;
+      transform: translateY(1rem);
+    }
+  }
+}

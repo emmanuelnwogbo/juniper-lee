@@ -1,0 +1,154 @@
+.contact {
+  position: absolute;
+  top: 14%;
+  left: 20%;
+  padding: 1.5rem;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(to right bottom, rgba($primary-color-contact, 1), rgba($primary-color-about, 1));
+  padding: 1rem;
+  border-radius: 2%;
+  width: 55%;
+  height: 60%;
+  transition: all .2s cubic-bezier(.17, .67, .83, .67);
+  transform: translateY(-100vh);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    background: linear-gradient(to right bottom, rgba($black, .8), rgba($black, .8)), url('.././img/hike.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 34%
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: $primary-color-work;
+    height: 100%;
+    width: 66%;
+    opacity: .6;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 73%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 73%);
+  }
+  &__header {
+    width: 50%;
+    z-index: 2000;
+    text-align: center;
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: .3rem;
+    transition: inherit;
+    margin-bottom: 1rem;
+  }
+  &__form {
+    width: 100%;
+    height: 90%;
+    align-self: center;
+    &-content {
+      display: flex;
+      height: 95%;
+      flex-direction: column;
+      justify-content: space-evenly
+    }
+    &-group {
+      width: 90%;
+      height: 20%;
+      border-radius: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly
+    }
+    &-input {
+      width: 70%;
+      height: 80%;
+      z-index: 9000;
+      display: block;
+      outline: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: inherit;
+      padding: 1.5rem 2rem;
+      border-radius: 2px;
+      background-color: rgba($white, .5);
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: 1rem;
+      transition: all .2s cubic-bezier(.17, .67, .83, .67);
+      &::placeholder {
+        color: $grey;
+        font-weight: 900
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        border-bottom: 3px solid $primary-color-contact;
+        transform: translateY(.5rem);
+      }
+      &:focus:invalid {
+        border-bottom: 3px solid $primary-color-client1;
+      }
+      &:placeholder-shown+.contact__form-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+      }
+    }
+    &-label {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: $black;
+      transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    }
+    &-btn {
+      position: relative;
+      height: 70%;
+      width: 20%;
+      transition: all .2s cubic-bezier(.17, .67, .83, .67);
+      transform: translateY(-3rem);
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      border-radius: 2px;
+      background-color: rgba($black, 1);
+      color: $white;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      z-index: 7000;
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        background: $white;
+        opacity: 0;
+        transition: opacity .2s;
+        z-index: -1;
+      }
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-3.4rem);
+      }
+      &:focus {
+        box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0.4);
+        transform: translateY(-3rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.navigation {
+  &__checkbox-contact {}
+  &__checkbox-contact:checked~.container>.contact {
+    z-index: 7000;
+    opacity: 1;
+    transform: translateY(-0vh);
+  }
+  &__checkbox-contact:checked~.container>.name__div {
+    color: $black;
+  }
+  &__checkbox-contact:checked~.container>.menu>.menu__list>.menu__list-item>.menu__item {
+    color: $black;
+  }
+  &__checkbox-contact:checked~.container>.menu>.menu__list>.menu__list-item {
+    &:hover>.menu__item::after {
+      background: $black;
+      transform: translateY(1rem);
+    }
+  }
+}

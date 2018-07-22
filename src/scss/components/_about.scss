@@ -1,0 +1,68 @@
+.about {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 40%;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(to right bottom, rgba($primary-color-about, 0.9), rgba($primary-color-about, 1));
+  padding: 2rem;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateY(100vh);
+  box-shadow: 7rem 3.5rem 4.5rem rgba(0, 0, 0, 0.4);
+  &>* {
+    transition: all .4s cubic-bezier(.17, .67, .83, .67);
+  }
+  &>*>* {
+    transition: all .4s cubic-bezier(.17, .67, .83, .67);
+  }
+  &__header {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__img-div {
+    margin-bottom: 1.5rem;
+  }
+  &__headshot {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+  &__paragraph {
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &__socials {
+    width: 60%;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    grid-template-rows: repeat(1, minmax(min-content, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    &-icon {
+      fill: $white;
+      width: 2rem;
+      height: 2rem;
+      transition: all .4s cubic-bezier(.17, .67, .83, .67);
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-.9rem) translateX(.3rem) scale(1.1);
+      }
+    }
+  }
+}

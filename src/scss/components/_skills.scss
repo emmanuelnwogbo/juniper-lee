@@ -1,0 +1,30 @@
+.skills {
+  position: absolute;
+  top: 57.7%;
+  right: 5%;
+  width: 40%;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(to right bottom, rgba($primary-color-about, 0.9), rgba($primary-color-about, 1));
+  padding: 2.4rem;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-rows: repeat(3, min-content);
+  grid-auto-rows: min-content;
+  grid-gap: 1rem;
+  justify-items: start;
+  align-items: start;
+  transform: translateY(100vh);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  &__item {
+    text-align: left;
+    padding: .6rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4)
+  }
+}

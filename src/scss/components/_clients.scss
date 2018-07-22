@@ -1,0 +1,102 @@
+.clients {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 70%;
+  box-shadow: 0 1.5rem 4rem rgba($primary-color-client, 1);
+  border-radius: .2rem;
+  background: linear-gradient(to right bottom, rgba($primary-color-client, 1), rgba($primary-color-client, 1));
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  z-index: -1;
+  transform: translateY(100vh);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &__header {
+    text-align: center;
+    align-self: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    box-shadow: 0 1.5rem 4rem rgba($primary-color-client, 1);
+    position: relative;
+    border-radius: .3rem;
+    width: 35%;
+    margin-bottom: 6rem;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 50%;
+      height: 100%;
+      background: $primary-color-client1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 50%;
+      height: 100%;
+      background: $primary-color-client2;
+    }
+  }
+  &__content {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    &-item {
+      width: 30%;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      padding: .6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-content: center;
+      align-items: center;
+      transform: translateY(-3rem) translateX(1rem);
+    }
+    &-para {
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      letter-spacing: .1rem
+    }
+    &-person {
+      display: flex;
+      flex-direction: column;
+      &_name {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: .7rem;
+        color: $primary-color-client2;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      }
+      &_title {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: $primary-color-client1;
+      }
+      &_img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 100%;
+        align-self: center;
+        margin-bottom: .8rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

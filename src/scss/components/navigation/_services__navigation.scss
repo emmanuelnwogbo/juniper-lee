@@ -1,0 +1,39 @@
+.navigation {
+  &__checkbox-services {}
+  &__checkbox-services:checked~.container::before {
+    transform: translateX(35vw);
+    background: linear-gradient(to right bottom, rgba($primary-whitish, 0.9), rgba($primary-color-services, 1)), url('./.././img/hike.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70vw;
+  }
+  &__checkbox-services:checked~.container::after {
+    transform: translateX(-60vw);
+    width: 40vw;
+    background: linear-gradient(to right bottom, rgba($primary-color-services, 0.7), rgba($primary-color-services, 0.7)), url('.././img/desk.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+  &__checkbox-services:checked~.container>.name__div {
+    color: $white;
+  }
+  &__checkbox-services:checked~.container>.services {
+    z-index: 7000;
+    opacity: 1;
+    transform: translateY(-1vh)
+  }
+  &__checkbox-services:checked~.container>.menu>.menu__list>.menu__list-item>.menu__item {
+    color: $primary-color-services;
+  }
+  &__checkbox-services:checked~.container>.menu>.menu__list>.menu__list-item {
+    &:hover>.menu__item::after {
+      background: $primary-color-services;
+      transform: translateY(1rem);
+    }
+  }
+  &__checkbox-services:checked~.container>.mast {
+    z-index: -1;
+  }
+}
